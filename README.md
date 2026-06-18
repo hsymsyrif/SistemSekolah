@@ -166,12 +166,16 @@ public static void main(String[] args) {
 
 ## 📸 Tampilan Aplikasi
 
+![alt text](image-2.png)
+
 ### Absensi Siswa
 
 - Input data siswa
 - Status absensi
 - CRUD data absensi
 - TableView data siswa
+
+![![alt text](image-1.png)](image.png)
 
 ### Jadwal Pelajaran
 
