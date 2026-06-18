@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AbsensiController"
+            styleClass="border-pane"
+            stylesheets="@style.css">
+
+    <top>
+        <Label text="📋 DATA ABSENSI"
+               styleClass="title"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" styleClass="container">
+
+            <GridPane hgap="15" vgap="15">
+
+                <columnConstraints>
+                    <ColumnConstraints minWidth="120"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="NIS:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNis"
+                           promptText="Masukkan NIS"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Nama:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNama"
+                           promptText="Masukkan Nama"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Tanggal:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="dpTanggal"
+                            GridPane.rowIndex="2"
+                            GridPane.columnIndex="1"/>
+
+                <Label text="Status:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="cbStatus"
+                          GridPane.rowIndex="3"
+                          GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button text="💾 Simpan"
+                        onAction="#simpanData"
+                        styleClass="btn-save"/>
+
+                <Button text="✏ Edit"
+                        onAction="#editData"
+                        styleClass="btn-edit"/>
+
+                <Button text="🗑 Hapus"
+                        onAction="#hapusData"
+                        styleClass="btn-delete"/>
+            </HBox>
+
+            <TableView fx:id="tableAbsensi" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNis" text="NIS"/>
+                    <TableColumn fx:id="colNama" text="Nama"/>
+                    <TableColumn fx:id="colTanggal" text="Tanggal"/>
+                    <TableColumn fx:id="colStatus" text="Status"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.JadwalController"
+            stylesheets="@style.css"
+            styleClass="border-pane">
+
+    <top>
+        <Label text="📚 JADWAL PELAJARAN"
+               styleClass="title"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" styleClass="container">
+
+            <GridPane hgap="15" vgap="15">
+
+            <columnConstraints>
+            <ColumnConstraints minWidth="120"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+                <Label text="Hari:"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtHari"
+                           promptText="Contoh: Senin"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Jam:"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtJam"
+                           promptText="07:00 - 08:30"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Mapel:"
+                       GridPane.rowIndex="2"
+                       GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtMapel"
+                           promptText="Mata Pelajaran"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Guru:"
+                       GridPane.rowIndex="3"
+                       GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtGuru"
+                           promptText="Nama Guru"
+                           GridPane.rowIndex="3"
+                           GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <HBox spacing="10">
+                <Button text="💾 Simpan"
+                        onAction="#simpanData"
+                        styleClass="btn-save"/>
+
+                <Button text="✏ Edit"
+                        onAction="#editData"
+                        styleClass="btn-edit"/>
+
+                <Button text="🗑 Hapus"
+                        onAction="#hapusData"
+                        styleClass="btn-delete"/>
+            </HBox>
+
+            <TableView fx:id="tableJadwal"
+                       VBox.vgrow="ALWAYS">
+
+                <columns>
+                    <TableColumn fx:id="colHari"
+                                 text="Hari"/>
+
+                    <TableColumn fx:id="colJam"
+                                 text="Jam"/>
+
+                    <TableColumn fx:id="colMapel"
+                                 text="Mapel"/>
+
+                    <TableColumn fx:id="colGuru"
+                                 text="Guru"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>
