@@ -174,7 +174,7 @@ public static void main(String[] args) {
 - CRUD data absensi
 - TableView data siswa
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 
 ### Jadwal Pelajaran
