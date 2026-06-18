@@ -166,7 +166,6 @@ public static void main(String[] args) {
 
 ## 📸 Tampilan Aplikasi
 
-![alt text](image-2.png)
 
 ### Absensi Siswa
 
@@ -175,13 +174,16 @@ public static void main(String[] args) {
 - CRUD data absensi
 - TableView data siswa
 
-![![alt text](image-1.png)](image.png)
+![alt text](image-2.png)
+
 
 ### Jadwal Pelajaran
 
 - Input jadwal
 - CRUD jadwal
 - TableView jadwal pelajaran
+
+![![alt text](image-1.png)](image.png)
 
 ---
 
